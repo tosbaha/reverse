@@ -1,0 +1,1 @@
+This Theos tweak hides ads from bein sports app.
