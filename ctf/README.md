@@ -1,1 +1,0 @@
-This folder will have the codes that I used for CTF challenges.
