@@ -1,0 +1,10 @@
+from Crypto.Cipher import AES
+
+encrypted = bytes.fromhex("A1A610483EBD825CE1E00D722DF68DCFF70CAC1E64A4FCA7440B5ABC617259CE66F7E0717B5751A3BF5F6C9DEE1C17BC881C2C17A0D8032F369A00BA3209C4F569D2CD4729B6B4BABB6B35F0D504F25D")
+iv = bytes.fromhex("78615338BCB1F180D34ED1FA47A41D3D")
+# SHA256 of license.bin
+key = bytes.fromhex("600abf28e03c73471a73bb909210dc2d2b4e98c7577d6b71299d2e54d693d14d")
+
+cipher = AES.new(key, AES.MODE_CBC, iv)
+decrypted = cipher.decrypt(encrypted).decode('utf-8')
+print("Flag:", decrypted)
